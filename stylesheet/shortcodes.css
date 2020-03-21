@@ -67,13 +67,13 @@
   background-size: cover;
 }
 .services-box .iconbox-content .title {
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 30px;
   color: #010c39;
   margin-bottom: 20px;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   overflow: hidden;
   font-family: "Work Sans", sans-serif;
   -webkit-transition: all 0.5s ease-in-out;
