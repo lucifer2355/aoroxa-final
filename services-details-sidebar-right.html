@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="zxx">
+  <!-- Mirrored from saku.htweb.vn/services-details-sidebar-right.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Mar 2020 07:25:15 GMT -->
   <head>
     <meta charset="UTF-8" />
-    <title>Aoroxa</title>
+    <title>Saku</title>
 
     <!-- Mobile Specific Metas-->
     <meta
@@ -34,7 +35,10 @@
       id="colors_s"
     />
 
-    <link href="icon/ico file 2.ico" rel="shortcut icon" />
+    <link href="icon/favicon.ico" rel="shortcut icon" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
   </head>
 
   <body>
@@ -47,11 +51,11 @@
           <div id="logo" class="logo">
             <a href="index.html" title="Logo"
               ><img
-                src="images/logo/logo02edited.png"
+                src="images/logo/logo02.png"
                 alt="images"
                 data-width="115"
                 data-height="50"
-                data-retina="images/logo/logo01@2x.png"
+                data-retina="images/logo/logo02.png"
             /></a>
           </div>
           <div class="content-menu">
@@ -130,57 +134,119 @@
                 </div>
               </div>
             </div>
-            <h2 class="title">Web Development</h2>
-            <p>
-              We offer unique and secure web application development solutions
-              matching customer’s business strategies and make a winning first
-              impression and promote your business to masses with our creative
-              and attention-grabbing web designs. Focused on a collaborative
-              approach, our team consistently pushing technological boundaries
-              to understands customers’ needs to deliver business value.
-            </p>
+            <!-- <div class="radix-portfolio-filter "> -->
           </div>
-          <div class="services-details-desc">
-            <h3 class="title">Platform that we use</h3>
-            <p>
-              platform icon
-            </p>
-          </div>
+          <div class="radix-portfolio-filter ">
+            <div class="single-portfolio-item webDevelopment">
+              <h2 class="title">Web Development</h2>
+              <p>
+                We offer unique and secure web application development solutions
+                matching customer’s business strategies and make a winning first
+                impression and promote your business to masses with our creative
+                and attention-grabbing web designs. Focused on a collaborative
+                approach, our team consistently pushing technological boundaries
+                to understands customers’ needs to deliver business value.
+              </p>
+              <!-- </div> -->
+              <div class="services-details-desc">
+                <h3 class="title">Platform that we use</h3>
+                <p>
+                  platform icon
+                </p>
 
-          <div class="line-area-chart">
-            <img src="" alt="" />
+                <div class="line-area-chart">
+                  <img src="" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="single-portfolio-item mobile">
+              <h2 class="title">Mobile</h2>
+              <p>
+                We offer unique and secure web application development solutions
+                matching customer’s business strategies and make a winning first
+                impression and promote your business to masses with our creative
+                and attention-grabbing web designs. Focused on a collaborative
+                approach, our team consistently pushing technological boundaries
+                to understands customers’ needs to deliver business value.
+              </p>
+              <!-- </div> -->
+              <div class="services-details-desc">
+                <h3 class="title">Platform that we use</h3>
+                <p>
+                  platform icon
+                </p>
+
+                <div class="line-area-chart">
+                  <img src="" alt="" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="col-right">
           <div class="sidebar">
             <div class="widget widget-categories">
-              <div class="bg-categories">
+              <div class="bg-categories ">
                 <ul class="categories-wrap">
-                  <li>
-                    <div id="#service-web" class="block-inside active">
-                      <a href="#">Web Development</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div id="#service-ecom" class="block-inside">
-                      <a>E-Commerse Web Development</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div data-tab="#service-mob" class="block-inside ">
-                      <a href="">Mobile Application Development</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div data-tab="#service-graph" class="block-inside">
-                      <a href="#">Graphics Design</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div data-tab="#service-digit" class="block-inside">
-                      <a href="#">Digital Marketing</a>
-                    </div>
-                  </li>
+                  <div class="portfolio-menu">
+                    <li>
+                      <div class="block-inside active">
+                        <h3
+                          data-filter=".webDevelopment"
+                          style="color: #0c1b54; cursor: pointer;"
+                        >
+                          Web Development
+                        </h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="block-inside">
+                        <h3
+                          data-filter=".eCommerse"
+                          style="color: #0c1b54; cursor: pointer"
+                        >
+                          E-Commerse Web Development
+                        </h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="block-inside ">
+                        <h3
+                          data-filter=".mobile"
+                          style="color: #0c1b54; cursor: pointer"
+                        >
+                          Mobile Application Development
+                        </h3>
+                      </div>
+                    </li>
+                    <!-- <li>
+                      <div class="block-inside">
+                        <a href="#">Graphics Design</a>
+                      </div>
+                    </li> -->
+                    <li>
+                      <div class="block-inside">
+                        <h3
+                          data-filter=".graphics"
+                          style="color: #0c1b54; cursor: pointer"
+                        >
+                          Graphics Design
+                        </h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="block-inside">
+                        <h3
+                          data-filter=".digitalMarketing"
+                          style="color: #0c1b54; cursor: pointer"
+                        >
+                          Digital Marketing
+                        </h3>
+                      </div>
+                    </li>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -320,6 +386,7 @@
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/plugins.js"></script>
     <script src="javascript/jquery-ui.js"></script>
+    <script src="./javascript/isotope.pkgd.min.js"></script>
     <script src="javascript/owl.carousel.min.js"></script>
     <script src="javascript/gmap3.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo_pcAdFNbTDCAvMwAD19oRTuEmb9M50c"></script>
@@ -335,6 +402,7 @@
     <script src="rev-slider/js/jquery.themepunch.tools.min.js"></script>
     <script src="rev-slider/js/jquery.themepunch.revolution.min.js"></script>
     <script src="javascript/rev-slider.js"></script>
+    <script src="./javascript//script.js"></script>
 
     <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js"></script>
@@ -347,4 +415,6 @@
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js"></script>
     <script src="rev-slider/js/extensions/extensionsrevolution.extension.video.min.js"></script>
   </body>
+
+  <!-- Mirrored from saku.htweb.vn/services-details-sidebar-right.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Mar 2020 07:25:16 GMT -->
 </html>
