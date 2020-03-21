@@ -11,7 +11,7 @@ if ($.fn.imagesLoaded) {
     });
 
     // filter items on button click
-    $(".portfolio-menu li").on("click", "h3", function() {
+    $(".portfolio-menu li div").on("click", "h3", function() {
       var filterValue = $(this).attr("data-filter");
       $grid.isotope({
         filter: filterValue
