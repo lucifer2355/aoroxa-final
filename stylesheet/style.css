@@ -1117,9 +1117,13 @@ input::-webkit-input-placeholder {
   padding: 199px 0 128px 0;
   background-image: url(../images/page-title/01.png);
   background-size: cover;
+  transform: scaleX(-1);
 }
 .page-title {
   color: #ffffff;
+}
+.breadcrumbs-wrap {
+  transform: scaleX(-1);
 }
 .breadcrumbs-wrap .title {
   font-size: 40px;
