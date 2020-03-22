@@ -3439,3 +3439,8 @@ input::-webkit-input-placeholder {
     rgba(242, 105, 253, 1) 100%
   );
 }
+
+.platform-img {
+  border: 1px solid;
+  padding: 10px;
+}
