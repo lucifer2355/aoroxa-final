@@ -2120,9 +2120,11 @@ input::-webkit-input-placeholder {
   font-size: 13px;
   letter-spacing: 5px;
 }
-.testimonial .author-info .star-rating i:nth-child(4),
+.testimonial .author-info .star-rating i:nth-child(4) {
+  color: #ffc600;
+}
 .testimonial .author-info .star-rating i:nth-child(5) {
-  color: #dddddd;
+  color: #ffffff;
 }
 .testimonial .author-info p {
   font-size: 20px;
