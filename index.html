@@ -33,6 +33,7 @@
       href="stylesheet/colors/colorsub1.css"
       id="colors_s"
     />
+    <link rel="javascript" href="validation.js" />
 
     <link href="icon/ico file 2.ico" rel="shortcut icon" />
   </head>
@@ -52,6 +53,7 @@
                 data-width="115"
                 data-height="50"
                 data-retina="images/logo/logo02.png"
+                style="pointer-events: none;"
             /></a>
           </div>
           <div class="content-menu">
@@ -69,14 +71,14 @@
                   <li>
                     <a href="about.html">About Us</a>
                   </li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </nav>
             </div>
             <div class="lang-user">
               <div class="user">
-                <a href="#" class="block"></a>
-                <a href="#" class="icon"><span class="icon-user"></span></a>
+                <a class="block"></a>
+                <a class="icon"><span class="icon-user"></span></a>
               </div>
             </div>
           </div>
@@ -108,29 +110,61 @@
       </div>
       <div class="featured-post">
         <div class="entry-image up-down">
-          <img src="images/transparent-head/04.png" alt="images" />
+          <img
+            src="images/transparent-head/04.png"
+            alt="images"
+            style="pointer-events: none;"
+          />
         </div>
       </div>
       <div class="shape1">
-        <img src="images/transparent-head/05.png" alt="images" />
+        <img
+          src="images/transparent-head/05.png"
+          alt="images"
+          style="pointer-events: none;"
+        />
       </div>
       <div class="shape2">
-        <img src="images/transparent-head/06.png" alt="images" />
+        <img
+          src="images/transparent-head/06.png"
+          alt="images"
+          style="pointer-events: none;"
+        />
       </div>
       <div class="shape3">
-        <img src="images/transparent-head/07.png" alt="images" />
+        <img
+          src="images/transparent-head/07.png"
+          alt="images"
+          style="pointer-events: none;"
+        />
       </div>
       <div class="shape4 rotateme">
-        <img src="images/transparent-head/08.png" alt="images" />
+        <img
+          src="images/transparent-head/08.png"
+          alt="images"
+          style="pointer-events: none;"
+        />
       </div>
       <div class="shape5">
-        <img src="images/transparent-head/09.png" alt="images" />
+        <img
+          src="images/transparent-head/09.png"
+          alt="images"
+          style="pointer-events: none;"
+        />
       </div>
       <div class="shape6">
-        <img src="images/transparent-head/10.png" alt="images" />
+        <img
+          src="images/transparent-head/10.png"
+          alt="images"
+          style="pointer-events: none;"
+        />
       </div>
       <div class="shape7">
-        <img src="images/transparent-head/11.png" alt="images" />
+        <img
+          src="images/transparent-head/11.png"
+          alt="images"
+          style="pointer-events: none;"
+        />
       </div>
     </div>
     <!-- banner-home -->
@@ -147,9 +181,11 @@
           <div class="col-lg-4 col-12 wow fadeInUp">
             <div class="services-box services-box-type2">
               <div class="iconbox-icon">
-                <img src="images/icons/concept1.png" alt="" /><span
-                  class=""
-                ></span>
+                <img
+                  src="images/icons/concept1.png"
+                  alt=""
+                  style="pointer-events: none;"
+                /><span class=""></span>
               </div>
               <div class="iconbox-content">
                 <h3 class="title">Concept & Strategies</h3>
@@ -166,7 +202,11 @@
           <div class="col-lg-4 col-12 wow fadeInDown" data-wow-delay="800ms">
             <div class="services-box services-box-type2">
               <div class="iconbox-icon">
-                <img src="images/icons/design1.png" alt="" />
+                <img
+                  src="images/icons/design1.png"
+                  alt=""
+                  style="pointer-events: none;"
+                />
                 <span class=""></span>
               </div>
               <div class="iconbox-content">
@@ -184,7 +224,11 @@
           <div class="col-lg-4 col-12 wow fadeInDown" data-wow-delay="1200ms">
             <div class="services-box services-box-type2">
               <div class="iconbox-icon">
-                <img src="images/icons/deploy1.png" alt="" />
+                <img
+                  src="images/icons/deploy1.png"
+                  alt=""
+                  style="pointer-events: none;"
+                />
                 <span class=""></span>
               </div>
               <div class="iconbox-content">
@@ -218,7 +262,11 @@
           >
             <div class="featured-post position-relative">
               <div class="entry-image up-down">
-                <img src="images/find-customer/02.png" alt="images" />
+                <img
+                  src="images/find-customer/02.png"
+                  alt="images"
+                  style="pointer-events: none;"
+                />
               </div>
               <div class="spinning-circle-customer none-1199"></div>
             </div>
@@ -278,17 +326,31 @@
                     src="images/icons/web devlopment.png"
                     alt=""
                     style="padding-bottom: 5px;"
+                    style="pointer-events: none;"
                   />
                 </div>
               </div>
-              <div class="iconbox-content">
+              <div id="nav" class="iconbox-content">
                 <h3 class="title">Web Development</h3>
                 <p class="description" style="padding-bottom: 88px;">
                   We are committed to empowering our customers by giving them
                   the tools and knowledge for successful software outcomes.
                 </p>
-                <div class="read-more">
-                  <a href="#">Read more</a>
+                <div goto="text1" class="read-more">
+                  <a
+                    href="services-details-sidebar-right.html"
+                    onclick="loadscript()"
+                    >Read more</a
+                  >
+                  <script>
+                    function loadscript() {
+                      $(document).ready(function() {
+                        $('#nav div').click(function() {
+                          var id = 'hey' + $(this).attr('goto');
+                        });
+                      });
+                    }
+                  </script>
                 </div>
               </div>
               <div class="rectangle-1"></div>
@@ -308,6 +370,7 @@
                     src="images/icons/e commerce website.png"
                     alt=""
                     style="padding-bottom: 5px;"
+                    style="pointer-events: none;"
                   />
                 </div>
               </div>
@@ -319,7 +382,7 @@
                   store more accessible than you can imagin.
                 </p>
                 <div class="read-more">
-                  <a href="">Read more</a>
+                  <a href="services-details-sidebar-right.html">Read more</a>
                 </div>
               </div>
               <div class="rectangle-1"></div>
@@ -348,7 +411,9 @@
                   We are committed to guiding our customers through systematic
                   digitalisation and improving their online strategy.
                 </p>
-                <div class="read-more"><a href="#">Read more</a></div>
+                <div class="read-more">
+                  <a href="services-details-sidebar-right.html">Read more</a>
+                </div>
               </div>
               <div class="rectangle-1"></div>
               <div class="rectangle-2"></div>
@@ -367,6 +432,7 @@
                     src="images/icons/graphic design.png"
                     alt=""
                     style="padding-bottom: 5px;"
+                    style="pointer-events: none;"
                   />
                 </div>
               </div>
@@ -377,7 +443,9 @@
                   solution to make a creative design to craft the most practical
                   and attractive designs.
                 </p>
-                <div class="read-more"><a href="#">Read more</a></div>
+                <div class="read-more">
+                  <a href="services-details-sidebar-right.html">Read more</a>
+                </div>
               </div>
               <div class="rectangle-1"></div>
               <div class="rectangle-2"></div>
@@ -399,7 +467,7 @@
 
     <!-- find-customer -->
     <section class="best-business best-business-type2 clearfix" id="platform">
-      <div class="container">
+      <div id="hey" class="container">
         <h3 class="title text-white wow fadeInDown">
           Technologies we work with
         </h3>
@@ -437,6 +505,7 @@
                           <img
                             src="images/icons/programming languAGE.png"
                             alt=""
+                            style="pointer-events: none;"
                           />
                           <div class="name">Front End</div>
                         </div>
@@ -445,15 +514,24 @@
                           style="display: flex; justify-content: space-around;"
                         >
                           <div class="platform-img">
-                            <img src="./images//platform/html.png" alt="" />
+                            <img
+                              src="./images//platform/html.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images/platform/ANGULAR.png" alt="" />
+                            <img
+                              src="./images/platform/ANGULAR.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
                             <img
                               src="./images/platform/javascript.png"
                               alt=""
+                              style="pointer-events: none;"
                             />
                           </div>
 
@@ -461,10 +539,15 @@
                             <img
                               src="./images/platform/bootsstrap.png"
                               alt=""
+                              style="pointer-events: none;"
                             />
                           </div>
                           <div class="platform-img">
-                            <img src="./images/platform/css.png" alt="" />
+                            <img
+                              src="./images/platform/css.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                         </div>
                       </div>
@@ -474,6 +557,7 @@
                             <img
                               src="images/icons/programming languAGE.png"
                               alt=""
+                              style="pointer-events: none;"
                             />
                           </div>
                           <div class="name">Back End</div>
@@ -483,16 +567,32 @@
                           style="display: flex; justify-content: space-around;"
                         >
                           <div class="platform-img">
-                            <img src="./images//platform/php.png" alt="" />
+                            <img
+                              src="./images//platform/php.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/django.png" alt="" />
+                            <img
+                              src="./images//platform/django.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/node.png" alt="" />
+                            <img
+                              src="./images//platform/node.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/python.png" alt="" />
+                            <img
+                              src="./images//platform/python.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                         </div>
                       </div>
@@ -502,6 +602,7 @@
                             <img
                               src="images/icons/programming languAGE.png"
                               alt=""
+                              style="pointer-events: none;"
                             />
                           </div>
                           <div class="name">Mobile</div>
@@ -511,16 +612,32 @@
                           style="display: flex; justify-content: space-around;"
                         >
                           <div class="platform-img">
-                            <img src="./images//platform/react.png" alt="" />
+                            <img
+                              src="./images//platform/react.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/swift.png" alt="" />
+                            <img
+                              src="./images//platform/swift.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/android.png" alt="" />
+                            <img
+                              src="./images//platform/android.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/i.png" alt="" />
+                            <img
+                              src="./images//platform/i.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                         </div>
                       </div>
@@ -530,6 +647,7 @@
                             <img
                               src="images/icons/programming languAGE.png"
                               alt=""
+                              style="pointer-events: none;"
                             />
                           </div>
                           <div class="name">DataBase</div>
@@ -539,19 +657,32 @@
                           style="display: flex; justify-content: space-around;"
                         >
                           <div class="platform-img">
-                            <img src="./images//platform/firebase.png" alt="" />
+                            <img
+                              src="./images//platform/firebase.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
                             <img
                               src="./images//platform/postgrage.png"
                               alt=""
+                              style="pointer-events: none;"
                             />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/mysql.png" alt="" />
+                            <img
+                              src="./images//platform/mysql.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div class="platform-img">
-                            <img src="./images//platform/mongodb.png" alt="" />
+                            <img
+                              src="./images//platform/mongodb.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                         </div>
                       </div>
@@ -561,6 +692,7 @@
                             <img
                               src="images/icons/programming languAGE.png"
                               alt=""
+                              style="pointer-events: none;"
                             />
                           </div>
                           <div class="name">CMS</div>
@@ -570,13 +702,18 @@
                           style="display: flex; justify-content: start; padding-left: 20px;"
                         >
                           <div class="platform-img">
-                            <img src="./images//platform/magento.png" alt="" />
+                            <img
+                              src="./images//platform/magento.png"
+                              alt=""
+                              style="pointer-events: none;"
+                            />
                           </div>
                           <div style="padding-left: 20px;">
                             <div class="platform-img">
                               <img
                                 src="./images//platform/shopify.png"
                                 alt=""
+                                style="pointer-events: none;"
                               />
                             </div>
                           </div>
@@ -587,7 +724,11 @@
                 </div>
               </div>
               <div class="rectangle-bg-business none-1199">
-                <img src="images/best-business/03.png" alt="images" />
+                <img
+                  src="images/best-business/03.png"
+                  alt="images"
+                  style="pointer-events: none;"
+                />
               </div>
             </div>
           </div>
@@ -628,7 +769,10 @@
             <div class="gallery-item">
               <div class="image-box">
                 <a href="#"
-                  ><img src="images/project/h-meddico.png" alt="images"
+                  ><img
+                    src="images/project/h-meddico.png"
+                    alt="images"
+                    style="pointer-events: none;"
                 /></a>
                 <div class="hover-effect">
                   <div class="text-inside">
@@ -647,7 +791,10 @@
             <div class="gallery-item">
               <div class="image-box">
                 <a href="#"
-                  ><img src="images/project/h-makshay-ui.png" alt="images"
+                  ><img
+                    src="images/project/h-makshay-ui.png"
+                    alt="images"
+                    style="pointer-events: none;"
                 /></a>
                 <div class="hover-effect">
                   <div class="text-inside">
@@ -662,7 +809,10 @@
             <div class="gallery-item">
               <div class="image-box">
                 <a href="#"
-                  ><img src="images/project/h-crypto trader.png" alt="images"
+                  ><img
+                    src="images/project/h-crypto trader.png"
+                    alt="images"
+                    style="pointer-events: none;"
                 /></a>
                 <div class="hover-effect">
                   <div class="text-inside">
@@ -715,9 +865,14 @@
                       <img
                         src="images/testimonial/group design nikunj bhalala.png"
                         alt="images"
+                        style="pointer-events: none;"
                       />
                       <div class="polygon">
-                        <img src="images/testimonial/09.png" alt="images" />
+                        <img
+                          src="images/testimonial/09.png"
+                          alt="images"
+                          style="pointer-events: none;"
+                        />
                       </div>
                       <div class="quotes-small">
                         <span class="icon icon-text-quotes"></span>
@@ -739,7 +894,7 @@
                       and care much about the client needs. Highly recommended.
                     </p>
                     <div class="name">
-                      <a href="#">Group Design</a>
+                      <a>Group Design</a>
                     </div>
                   </div>
                 </div>
@@ -749,9 +904,14 @@
                       <img
                         src="images/testimonial/blackhole.png"
                         alt="images"
+                        style="pointer-events: none;"
                       />
                       <div class="polygon">
-                        <img src="images/testimonial/09.png" alt="images" />
+                        <img
+                          src="images/testimonial/09.png"
+                          alt="images"
+                          style="pointer-events: none;"
+                        />
                       </div>
                       <div class="quotes-small">
                         <span class="icon icon-text-quotes"></span>

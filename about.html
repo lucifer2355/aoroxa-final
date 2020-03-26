@@ -33,6 +33,7 @@
       href="stylesheet/colors/colorsub1.css"
       id="colors_s"
     />
+    <link rel="javascript" href="validation.js" />
 
     <link href="icon/ico file 2.ico" rel="shortcut icon" />
   </head>
@@ -52,6 +53,7 @@
                 data-width="115"
                 data-height="50"
                 data-retina="images/logo/logo01@2x.png"
+                style="pointer-events: none;"
             /></a>
           </div>
           <div class="content-menu">
@@ -69,14 +71,14 @@
                   <li>
                     <a href="about.html" class="active">About Us</a>
                   </li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </nav>
             </div>
             <div class="lang-user">
               <div class="user">
-                <a href="#" class="block"></a>
-                <a href="#" class="icon"><span class="icon-user"></span></a>
+                <a class="block"></a>
+                <a class="icon"><span class="icon-user"></span></a>
               </div>
             </div>
           </div>
@@ -109,7 +111,11 @@
         <div class="col-left">
           <div class="featured-post position-relative">
             <div class="entry-image">
-              <img src="images/about/01.png" alt="images" />
+              <img
+                src="images/about/01.png"
+                alt="images"
+                style="pointer-events: none;"
+              />
             </div>
           </div>
         </div>
@@ -140,7 +146,9 @@
               responsive websites and many innovative mobile apps.
             </p>
             <div class="fl-btn btn-linear linear-color-one mg-32">
-              <a href="#" class="btn-send hv-linear border-corner"
+              <a
+                href="services-details-sidebar-right.html"
+                class="btn-send hv-linear border-corner"
                 >our services</a
               >
             </div>
@@ -209,7 +217,11 @@
         <div class="counter counter-type1">
           <div class="content-counter">
             <div class="icon-count">
-              <img src="images/icons/current project option 2.png" alt="" />
+              <img
+                src="images/icons/current project option 2.png"
+                alt=""
+                style="pointer-events: none;"
+              />
             </div>
             <div class="numb-count-wrap">
               <span
@@ -259,7 +271,7 @@
                 back-end system.
               </p>
               <div class="fl-btn btn-linear linear-color-one mg-36">
-                <a href="#" class="btn-send hv-linear border-corner"
+                <a href="#contact" class="btn-send hv-linear border-corner"
                   >contact today</a
                 >
               </div>
@@ -268,7 +280,11 @@
           <div class="col-lg-7">
             <div class="featured-post">
               <div class="entry-image up-down">
-                <img src="images/about/02.png" alt="images" />
+                <img
+                  src="images/about/02.png"
+                  alt="images"
+                  style="pointer-events: none;"
+                />
               </div>
             </div>
           </div>
@@ -279,7 +295,10 @@
     <!-- team-members -->
     <!-- faq -->
     <!-- testimonial -->
-    <div class="contact-section contact-transform contact-style4 mg-change-97">
+    <div
+      id="contact"
+      class="contact-section contact-transform contact-style4 mg-change-97"
+    >
       <div class="container">
         <div class="contact-inside d-lg-flex">
           <div class="col-left">
@@ -295,7 +314,7 @@
                   <div class="content-info">
                     <h3 class="ct-by">Phone</h3>
                     <div class="description">
-                      <p>+91 8347077244</p>
+                      <a href="tel: +91 8347077244"> +91 8347-77244</a>
                     </div>
                   </div>
                 </li>
@@ -306,18 +325,7 @@
                   <div class="content-info">
                     <h3 class="ct-by">Email</h3>
                     <div class="description">
-                      <p>info@aoroxa.com</p>
-                    </div>
-                  </div>
-                </li>
-                <li class="contact-box">
-                  <div class="icon">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
-                  </div>
-                  <div class="content-info">
-                    <h3 class="ct-by">Address</h3>
-                    <div class="description">
-                      <p></p>
+                      <a href="mailto: info@aoroxa.com">info@aoroxa.com</a>
                     </div>
                   </div>
                 </li>
@@ -340,7 +348,9 @@
                     value=""
                     class="name"
                     placeholder="Name:"
+                    onkeyup="validateName()"
                   />
+                  <span class="error-message" id="name-error"></span>
                 </div>
                 <div class="w-right">
                   <input
@@ -350,7 +360,9 @@
                     value=""
                     class="email"
                     placeholder="Email:"
+                    onkeyup="validateEmail()"
                   />
+                  <span class="error-message" id="email-error"></span>
                 </div>
               </div>
               <div class="text-wrap d-sm-flex clearfix">
@@ -372,7 +384,9 @@
                     value=""
                     class="phone"
                     placeholder="Phone:"
+                    onkeyup="validatePhone()"
                   />
+                  <span class="error-message" id="phone-error"></span>
                 </div>
               </div>
               <div class="message-wrap">
@@ -386,6 +400,7 @@
               </div>
               <div class="fl-btn btn-linear linear-color-one">
                 <button
+                  onclick="validateForm()"
                   name="submit"
                   type="submit"
                   class="submit btn-contact hv-linear border-corner"
@@ -393,6 +408,7 @@
                 >
                   contact today
                 </button>
+                <span class="error-message" id="submit-error"></span>
               </div>
             </form>
           </div>
@@ -429,6 +445,7 @@
                       src="images/logo/logo02.png"
                       alt=""
                       style="padding-bottom: 20px;"
+                      style="pointer-events: none;"
                   /></a>
                   <div class="text">
                     Aoroxa is recognized as an eminent company in the software
@@ -512,7 +529,10 @@
 
               <div class="logo-footer">
                 <a href="index.html"
-                  ><img src="images/logo/logo03.png" alt="images"
+                  ><img
+                    src="images/logo/logo03.png"
+                    alt="images"
+                    style="pointer-events: none;"
                 /></a>
               </div>
             </div>
