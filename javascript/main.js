@@ -657,8 +657,8 @@
     $(window).on('load', function() {
       $('.loader').fadeOut();
       $('#loading-overlay')
-        .delay(500)
-        .fadeOut('slow', function() {
+        .delay(300)
+        .fadeOut('fast', function() {
           $(this).remove();
         });
     });
