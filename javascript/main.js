@@ -1,25 +1,5 @@
-/**
-    * headerFixed();
-    * flatRetinaLogo();
-    * onepage_nav();
-    * responsiveMenu();
-    * swClick();
-    * flatOwl();
-    * googleMap();
-    * contentBox();
-    * accordionToggle();
-    * spacer();
-    * flatCounter();
-    * VideoPopup();
-    * wowanimation();
-    * ajaxContactForm();
-    * goTop();
-    * removePreloader();
-;*/
-
 (function($) {
   'use strict';
-
   var headerFixed = function() {
     var top_height = $('.top-bar').height(),
       hd_height = $('.header').height();
@@ -29,7 +9,6 @@
       if (typeof header.data('offset') != 'undefined') {
         offset = header.data('offset');
       }
-
       $('.header.header-sticky').css('top', 0);
       if (top_height > 0) {
         if ($(window).scrollTop() >= top_height + hd_height + 20) {
@@ -46,12 +25,10 @@
       }
     });
   };
-
   var flatRetinaLogo = function() {
     var retina = window.devicePixelRatio > 1 ? true : false;
     var $logo = $('#logo img');
     var $logo_retina = $logo.data('retina');
-
     if (retina && $logo_retina) {
       $logo.attr({
         src: $logo.data('retina'),
@@ -60,7 +37,6 @@
       });
     }
   };
-
   var onepage_nav = function() {
     $('.page-template-front-page .mainnav > ul > li > a').on(
       'click',
@@ -90,7 +66,6 @@
         return false;
       }
     );
-
     $('.mainnav ul > li > a').on('click', function() {
       $(this)
         .addClass('active')
@@ -100,26 +75,20 @@
         .removeClass('active');
     });
   };
-
   var responsiveMenu = function() {
     var menuType = 'desktop';
-
     $(window).on('load resize', function() {
       var currMenuType = 'desktop';
-
       if (matchMedia('only screen and (max-width: 991px)').matches) {
         currMenuType = 'mobile';
       }
-
       if (currMenuType !== menuType) {
         menuType = currMenuType;
-
         if (currMenuType === 'mobile') {
           var $mobileMenu = $('#mainnav')
             .attr('id', 'mainnav-mobi')
             .hide();
           var hasChildMenu = $('#mainnav-mobi').find('li:has(ul)');
-
           $('#header .container').after($mobileMenu);
           hasChildMenu.children('ul').hide();
           hasChildMenu.children('a').after('<span class="btn-submenu"></span>');
@@ -128,7 +97,6 @@
           var $desktopMenu = $('#mainnav-mobi')
             .attr('id', 'mainnav')
             .removeAttr('style');
-
           $desktopMenu.find('.submenu').removeAttr('style');
           $('#header')
             .find('.nav-wrap')
@@ -137,12 +105,10 @@
         }
       }
     });
-
     $('.btn-menu').on('click', function() {
       $('#mainnav-mobi').slideToggle(300);
       $(this).toggleClass('active');
     });
-
     $(document).on('click', '#mainnav-mobi li .btn-submenu', function(e) {
       $(this)
         .toggleClass('active')
@@ -151,7 +117,6 @@
       e.stopImmediatePropagation();
     });
   };
-
   var swClick = function() {
     function activeLayout() {
       $('.switcher-container')
@@ -179,7 +144,6 @@
           return false;
         });
     }
-
     function activePattern() {
       $('.sw-pattern').on('click', function() {
         $('.sw-pattern.pattern a').removeClass('current');
@@ -195,7 +159,6 @@
     activeLayout();
     activePattern();
   };
-
   var flatOwl = function() {
     if ($().owlCarousel) {
       $('.flat-carousel-box').each(function() {
@@ -210,7 +173,6 @@
           gap = Number($this.data('gap')),
           dots = $this.data('dots'),
           nav = $this.data('nav');
-
         $this.find('.owl-carousel').owlCarousel({
           margin: gap,
           loop: loops,
@@ -221,21 +183,12 @@
           autoplay: false,
           autoplayTimeout: 5000,
           responsive: {
-            0: {
-              items: item4
-            },
-            600: {
-              items: item3
-            },
-            768: {
-              items: item2
-            },
-            1000: {
-              items: item
-            }
+            0: { items: item4 },
+            600: { items: item3 },
+            768: { items: item2 },
+            1000: { items: item }
           }
         });
-
         if (zero === 0) {
           $('.banners-z .owl-dot')
             .find('span')
@@ -260,7 +213,6 @@
               .children('span')
               .html(number);
           }
-
           $(this)
             .children('span')
             .addClass('btn-dots btn-defect');
@@ -268,9 +220,7 @@
       });
     }
   };
-
   var googleMap = function() {
-    // gmap default
     if ($().gmap3) {
       var data = JSON.parse(
         '[{"address":"Brooklyn, TiĂ¡Â»Æ’u bang New York 11201 Hoa KĂ¡Â»Â³"}]'
@@ -286,152 +236,85 @@
         }
       });
     }
-    // json loop
     $.each(data, function(key, val) {
       $('.flat-map').gmap3({
-        marker: {
-          values: [
-            {
-              address: val.address,
-              options: {}
-            }
-          ]
-        },
+        marker: { values: [{ address: val.address, options: {} }] },
         styledmaptype: {
           id: 'Xian',
-          options: {
-            name: 'Xian'
-          },
+          options: { name: 'Xian' },
           styles: [
             {
               featureType: 'administrative',
               elementType: 'all',
-              stylers: [
-                {
-                  saturation: '-100'
-                }
-              ]
+              stylers: [{ saturation: '-100' }]
             },
             {
               featureType: 'administrative.province',
               elementType: 'all',
-              stylers: [
-                {
-                  visibility: 'off'
-                }
-              ]
+              stylers: [{ visibility: 'off' }]
             },
             {
               featureType: 'landscape',
               elementType: 'all',
               stylers: [
-                {
-                  saturation: -100
-                },
-                {
-                  lightness: 65
-                },
-                {
-                  visibility: 'on'
-                }
+                { saturation: -100 },
+                { lightness: 65 },
+                { visibility: 'on' }
               ]
             },
             {
               featureType: 'poi',
               elementType: 'all',
               stylers: [
-                {
-                  saturation: -100
-                },
-                {
-                  lightness: '50'
-                },
-                {
-                  visibility: 'simplified'
-                }
+                { saturation: -100 },
+                { lightness: '50' },
+                { visibility: 'simplified' }
               ]
             },
             {
               featureType: 'road',
               elementType: 'all',
-              stylers: [
-                {
-                  saturation: '-100'
-                }
-              ]
+              stylers: [{ saturation: '-100' }]
             },
             {
               featureType: 'road.highway',
               elementType: 'all',
-              stylers: [
-                {
-                  visibility: 'simplified'
-                }
-              ]
+              stylers: [{ visibility: 'simplified' }]
             },
             {
               featureType: 'road.arterial',
               elementType: 'all',
-              stylers: [
-                {
-                  lightness: '30'
-                }
-              ]
+              stylers: [{ lightness: '30' }]
             },
             {
               featureType: 'road.local',
               elementType: 'all',
-              stylers: [
-                {
-                  lightness: '40'
-                }
-              ]
+              stylers: [{ lightness: '40' }]
             },
             {
               featureType: 'transit',
               elementType: 'all',
-              stylers: [
-                {
-                  saturation: -100
-                },
-                {
-                  visibility: 'simplified'
-                }
-              ]
+              stylers: [{ saturation: -100 }, { visibility: 'simplified' }]
             },
             {
               featureType: 'water',
               elementType: 'geometry',
               stylers: [
-                {
-                  hue: '#ffff00'
-                },
-                {
-                  lightness: -25
-                },
-                {
-                  saturation: -97
-                }
+                { hue: '#ffff00' },
+                { lightness: -25 },
+                { saturation: -97 }
               ]
             },
             {
               featureType: 'water',
               elementType: 'labels',
-              stylers: [
-                {
-                  lightness: -25
-                },
-                {
-                  saturation: -100
-                }
-              ]
+              stylers: [{ lightness: -25 }, { saturation: -100 }]
             }
           ]
         }
       });
     });
   };
-
   var contentBox = function() {
     $(window).on('load resize', function() {
       var mode = 'desktop';
@@ -447,7 +330,6 @@
       if (matchMedia('only screen and (max-width: 767px)').matches) {
         mode = 'smobile';
       }
-
       $('.themesflat-content-box').each(function() {
         var padding = $(this).data('padding');
         if (padding) {
@@ -466,7 +348,6 @@
             $(this).attr('style', 'padding:' + $(this).data('smobipadding'));
           }
         }
-
         var margin = $(this).data('margin');
         if (margin) {
           if (mode === 'desktop') {
@@ -480,7 +361,6 @@
       });
     });
   };
-
   var accordionToggle = function() {
     $('.flat-question').each(function() {
       var speed = { duration: 400 };
@@ -515,20 +395,15 @@
         });
     });
   };
-
   var spacer = function() {
     $(window).on('load resize', function() {
       var mode = 'desktop';
-
       if (matchMedia('only screen and (max-width: 1199px)').matches)
         mode = 'sdesktop';
-
       if (matchMedia('only screen and (max-width: 991px)').matches)
         mode = 'mobile';
-
       if (matchMedia('only screen and (max-width: 767px)').matches)
         mode = 'smobile';
-
       $('.flat-spacer').each(function() {
         if (mode == 'desktop') {
           $(this).attr('style', 'height:' + $(this).data('desktop') + 'px');
@@ -542,7 +417,6 @@
       });
     });
   };
-
   var flatCounter = function() {
     if ($(document.body).hasClass('counter-scroll')) {
       var a = 0;
@@ -555,11 +429,7 @@
               .each(function() {
                 var to = $(this).data('to'),
                   speed = $(this).data('speed');
-
-                $(this).countTo({
-                  to: to,
-                  speed: speed
-                });
+                $(this).countTo({ to: to, speed: speed });
               });
           }
           a = 1;
@@ -567,17 +437,12 @@
       });
     }
   };
-
   var VideoPopup = function() {
     $('.fancybox').on('click', function() {
-      $.fancybox({
-        href: this.href,
-        type: $(this).data('type')
-      });
+      $.fancybox({ href: this.href, type: $(this).data('type') });
       return false;
     });
   };
-
   var wowanimation = function() {
     var wow = new WOW({
       boxClass: 'wow',
@@ -589,55 +454,6 @@
     wow.init();
   };
 
-  var ajaxContactForm = function() {
-    $('#contactform').each(function() {
-      $(this).validate({
-        submitHandler: function(form) {
-          var $form = $(form),
-            str = $form.serialize(),
-            loading = $('<div />', { class: 'loading' });
-
-          $.ajax({
-            type: 'POST',
-            url: $form.attr('action'),
-            data: str,
-            beforeSend: function() {
-              $form.find('.form-submit').append(loading);
-            },
-            success: function(msg) {
-              var result, cls;
-              if (msg === 'Success') {
-                result =
-                  'Message Sent Successfully To Email Administrator. ( You can change the email management a very easy way to get the message of customers in the user manual )';
-                cls = 'msg-success';
-              } else {
-                result = 'Error sending email.';
-                cls = 'msg-error';
-              }
-
-              $form.prepend(
-                $('<div />', {
-                  class: 'flat-alert ' + cls,
-                  text: result
-                }).append(
-                  $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
-                )
-              );
-
-              $form
-                .find(':input')
-                .not('.submit')
-                .val('');
-            },
-            complete: function(xhr, status, error_thrown) {
-              $form.find('.loading').remove();
-            }
-          });
-        }
-      });
-    });
-  };
-
   var goTop = function() {
     $(window).scroll(function() {
       if ($(this).scrollTop() > 800) {
@@ -646,25 +462,21 @@
         $('#scroll-top').removeClass('show');
       }
     });
-
     $('#scroll-top').on('click', function() {
       $('html, body').animate({ scrollTop: 0 }, 1000, 'easeInOutExpo');
       return false;
     });
   };
-
   var removePreloader = function() {
     $(window).on('load', function() {
       $('.loader').fadeOut();
       $('#loading-overlay')
         .delay(300)
-        .fadeOut('fast', function() {
+        .fadeOut('slow', function() {
           $(this).remove();
         });
     });
   };
-
-  // Dom Ready
   $(function() {
     headerFixed();
     flatRetinaLogo();
