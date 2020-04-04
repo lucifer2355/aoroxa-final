@@ -32,7 +32,7 @@
 <div class=container>
 <div class=flex-header>
 <div id=logo class=logo>
-<a href=index.html title=Logo><img src=images/logo/logo02edited.png alt=images data-width=115 data-height=50 data-retina=images/logo/logo01@2x.png style=pointer-events:none /></a>
+<a href=index.html title=Logo><img src=images/logo/logo02edited.png alt=images data-width=115 data-height=50 data-retina=images/logo/logo02.png style=pointer-events:none /></a>
 </div>
 <div class=content-menu>
 <div class=nav-wrap>
@@ -243,11 +243,11 @@ back-end system.
 <form id=contactform action=contactus.php method=post class="form-contact form-submit">
 <div class="text-wrap d-sm-flex clearfix">
 <div class=w-left>
-<input type=text name=name id=name value class=name placeholder=Name: onkeyup=validateName() />
+<input type=text name=name id=name value class=name placeholder=Name: required=required>
 <span class=error-message id=name-error></span>
 </div>
 <div class=w-right>
-<input type=text name=email id=email value class=email placeholder=Email: onkeyup=validateEmail() />
+<input type=text name=email id=email value class=email placeholder=Email: required=required/>
 <span class=error-message id=email-error></span>
 </div>
 </div>
@@ -256,15 +256,15 @@ back-end system.
 <input type=text name=subject id=subject value class=subject placeholder=Subject: />
 </div>
 <div class=w-right>
-<input type=text name=phone id=phone value class=phone placeholder=Phone: onkeyup=validatePhone() />
+<input type=text name=phone id=phone value class=phone placeholder=Phone: />
 <span class=error-message id=phone-error></span>
 </div>
 </div>
 <div class=message-wrap>
-<textarea name=message id=comment-message rows=8 placeholder=Message required=required></textarea>
+<textarea name=message id=message rows=8 placeholder=Message required=required></textarea>
 </div>
 <div class="fl-btn btn-linear linear-color-one">
-<button onclick=validateForm() name=submit type=submit class="submit btn-contact hv-linear border-corner" value="submit">
+<button id="submit"  name=submit type=submit class="submit btn-contact hv-linear border-corner" value="submit">
 contact today
 </button>
 <span class=error-message id=submit-error></span>
@@ -357,8 +357,8 @@ impressive services that stands out globally.
 <script src=javascript/plugins.js></script>
 <script src=javascript/jquery-ui.js></script>
 <script src=javascript/owl.carousel.min.js></script>
+<script src="javascript/maps.js"></script>
 <script src=javascript/gmap3.min.js></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCo_pcAdFNbTDCAvMwAD19oRTuEmb9M50c"></script>
 <script src=javascript/jquery-fancybox.js></script>
 <script src=javascript/jquery-countTo.js></script>
 <script src=javascript/wow.min.js></script>
@@ -377,5 +377,18 @@ impressive services that stands out globally.
 <script src=rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js></script>
 <script src=rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js></script>
 <script src=rev-slider/js/extensions/extensionsrevolution.extension.video.min.js></script>
+
+<script>
+    $(document).ready(function(){
+        $("form").submit(function(){
+            document.getElementById("name").value="";
+            document.getElementById("email").value="";
+                  document.getElementById("phone").value="";
+                        document.getElementById("subject").value="";
+                              document.getElementById("message").value="";
+                              alert("Thank you! for getting in touch");
+        });
+    });
+</script>
 </body>
 </html>

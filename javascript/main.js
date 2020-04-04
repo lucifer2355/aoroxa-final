@@ -453,6 +453,87 @@
     });
     wow.init();
   };
+  
+ 
+  
+ var ajaxContactForm = function() {
+    $('#contactforma').each(function() {
+      $(this).validate({
+        submitHandler: function(form) {
+          var $form = $(form),
+            str = $form.serialize(),
+            loading = $('<div />', { class: 'loading' });
+
+          $.ajax({
+            type: 'POST',
+            url: $form.attr('action'),
+            data: str,
+            beforeSend: function() {
+              $form.find('.form-submit').append(loading);
+            },
+            success: function(msg) {
+              var result, cls;
+              if (msg != 'Success') {
+                result = 'Message Sent Successfully To Email Administrator.';
+                cls = 'msg-success';
+              } else {
+                result = 'Error sending email.';
+                cls = 'msg-error';
+              }
+
+              $form.prepend(
+                $('<div />', {
+                  class: 'flat-alert ' + cls,
+                  text: result
+                }).append(
+                  $('<a class="close" href="#"><i class="fa fa-close"></i></a>')
+                )
+              );
+
+              $form
+                .find(':input')
+                .not('.submit')
+                .val('');
+            },
+            complete: function(xhr, status, error_thrown) {
+              $form.find('.loading').remove();
+            }
+          });
+        }
+      });
+    });
+  };
+ 
+    /*$('.form').submit(function() {
+    var name = $('.name').val();
+    var email = $('.email').val();
+    var subject = $('.subject').val();
+    var phone = $('.phone').val();
+    var message = $('.message').val();
+    var dataString = 'name=' + name + '&email=' + email + '&message=' + message;
+    $.ajax({
+      type: 'POST',
+      url: 'mail.php',
+      data: dataString,
+      cache: false,
+      success: function() {
+        $('.form').hide();
+        $('.notice').fadeIn(400);
+      }
+    });
+    return false;
+  });*/
+            //   if (msg === 'Success') {
+            //     result = 'Message Sent Successfully To Email Administrator.';
+            //     cls = 'msg-success';
+            //   } else {
+            //     result = 'Error sending email.';
+            //     cls = 'msg-error';
+            //   }
+           
+
+           
+  
 
   var goTop = function() {
     $(window).scroll(function() {
