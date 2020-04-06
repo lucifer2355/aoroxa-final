@@ -31,7 +31,7 @@
   padding: 15px 42px;
 }
 .services-style2 {
-  padding: 113px 0 0 0;
+  padding: 113px 0 0;
 }
 .services-title-one .title-section {
   margin-bottom: 90px;
@@ -43,8 +43,8 @@
   margin-bottom: 13px;
 }
 .services-has-bg {
-  padding: 73px 0 111px 0;
-  background-image: url('../images/services/07.png');
+  padding: 73px 0 111px;
+  background-image: url(../images/services/07.png);
   background-size: cover;
 }
 .services-box .iconbox-content .title {
@@ -433,7 +433,7 @@
   filter: alpha(opacity=0.07);
   -moz-opacity: 0.07;
   -khtml-opacity: 0.07;
-  -ms-filter: 'alpha(opacity=0.07)';
+  -ms-filter: alpha(opacity=0.07);
   background-color: #a841e6;
 }
 .rectangle-2 {
@@ -443,7 +443,7 @@
   filter: alpha(opacity=0.07);
   -moz-opacity: 0.07;
   -khtml-opacity: 0.07;
-  -ms-filter: 'alpha(opacity=0.07)';
+  -ms-filter: alpha(opacity=0.07);
   background-color: #a841e6;
 }
 .rectangle-3 {
@@ -453,7 +453,7 @@
   filter: alpha(opacity=0.07);
   -moz-opacity: 0.07;
   -khtml-opacity: 0.07;
-  -ms-filter: 'alpha(opacity=0.07)';
+  -ms-filter: alpha(opacity=0.07);
   background-color: #a841e6;
 }
 .rectangle-4 {
@@ -463,7 +463,7 @@
   filter: alpha(opacity=0.06);
   -moz-opacity: 0.06;
   -khtml-opacity: 0.06;
-  -ms-filter: 'alpha(opacity=0.06)';
+  -ms-filter: alpha(opacity=0.06);
   background-color: #fff;
 }
 .rectangle-5 {
@@ -473,7 +473,7 @@
   filter: alpha(opacity=0.06);
   -moz-opacity: 0.06;
   -khtml-opacity: 0.06;
-  -ms-filter: 'alpha(opacity=0.06)';
+  -ms-filter: alpha(opacity=0.06);
   background-color: #fff;
 }
 .rectangle-6 {
@@ -483,7 +483,7 @@
   filter: alpha(opacity=0.06);
   -moz-opacity: 0.06;
   -khtml-opacity: 0.06;
-  -ms-filter: 'alpha(opacity=0.06)';
+  -ms-filter: alpha(opacity=0.06);
   background-color: #fff;
 }
 .snow-dot {
@@ -505,7 +505,7 @@
   left: 0;
   bottom: 0;
   position: absolute;
-  background-image: url('../images/contact/01.png');
+  background-image: url(../images/contact/01.png);
   display: inline-block;
   animation: slide 10s linear infinite;
   -webkit-animation: slide 10s linear infinite;

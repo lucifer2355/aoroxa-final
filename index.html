@@ -4,17 +4,28 @@
 <meta charset=UTF-8 />
 <title>Aoroxa</title>
 <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162760383-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162760383-1');
+</script>
+
 <link rel=stylesheet href=stylesheet/bootstrap.css />
-<link rel=stylesheet href=stylesheet/jquery-fancybox.css />
-<link rel=stylesheet href=stylesheet/jquery-ui.css />
-<link rel=stylesheet href=stylesheet/owl.theme.default.min.css />
+<!-- <link rel=stylesheet href=stylesheet/jquery-fancybox.css /> -->
+<!-- <link rel=stylesheet href=stylesheet/jquery-ui.css /> -->
+<!-- <link rel=stylesheet href=stylesheet/owl.theme.default.min.css /> -->
 <link rel=stylesheet href=stylesheet/owl.carousel.min.css />
-<link rel=stylesheet href=rev-slider/css/layers.css />
-<link rel=stylesheet href=rev-slider/css/navigation.css />
-<link rel=stylesheet href=rev-slider/css/settings.css />
-<link rel=stylesheet href=stylesheet/animate.css />
+<!-- <link rel=stylesheet href=rev-slider/css/layers.css /> -->
+<!-- <link rel=stylesheet href=rev-slider/css/navigation.css /> -->
+<!-- <link rel=stylesheet href=rev-slider/css/settings.css /> -->
+<!-- <link rel=stylesheet href=stylesheet/animate.css /> -->
 <link rel=stylesheet href=stylesheet/custom-animation.css />
-<link rel=stylesheet href=stylesheet/icomoon.css />
+
+<!-- <link rel=stylesheet href=stylesheet/icomoon.css /> -->
 <link rel=stylesheet href=stylesheet/shortcodes.css />
 <link rel=stylesheet href=stylesheet/style.css />
 <link rel=stylesheet href=stylesheet/responsive.css />
@@ -336,23 +347,23 @@ Technologies we work with
 <div class=t-wrap>
 <div class=icon></div>
 <img src="images/icons/programming languAGE.png" alt style=pointer-events:none />
-<div class=name>Front End</div>
+<div class=name>Front End</div> 
 </div>
 <div class=description style=display:flex;justify-content:space-around>
 <div class=platform-img>
-<img src=./images//platform/html.png alt style=pointer-events:none />
+<img src=./images//platform/html.png alt style=pointer-events:none /> 
 </div>
 <div class=platform-img>
-<img src=./images/platform/ANGULAR.png alt style=pointer-events:none />
+<img src=./images/platform/ANGULAR.png alt style=pointer-events:none /> 
 </div>
 <div class=platform-img>
-<img src=./images/platform/javascript.png alt style=pointer-events:none />
+ <img src=./images/platform/javascript.png alt style=pointer-events:none /> 
 </div>
 <div class=platform-img>
-<img src=./images/platform/bootsstrap.png alt style=pointer-events:none />
+<img src=./images/platform/bootsstrap.png alt style=pointer-events:none /> 
 </div>
 <div class=platform-img>
-<img src=./images/platform/css.png alt style=pointer-events:none />
+ <img src=./images/platform/css.png alt style=pointer-events:none /> 
 </div>
 </div>
 </div>
@@ -472,7 +483,7 @@ for our honorable customers
 <div class="col-lg-4 col-12 wow fadeInLeft" data-wow-delay=400ms>
 <div class=gallery-item>
 <div class=image-box>
-<a href=#><img src=images/project/h-meddico.png alt=images style=pointer-events:none /></a>
+<a href=#><img src=images/project/011.png alt=images style=pointer-events:none /></a>
 <div class=hover-effect>
 <div class=text-inside>
 <h3 class=name-gr>
@@ -487,7 +498,7 @@ for our honorable customers
 <div class="col-lg-4 col-12 wow fadeInUp" data-wow-delay=600ms>
 <div class=gallery-item>
 <div class=image-box>
-<a href=#><img src=images/project/h-makshay-ui.png alt=images style=pointer-events:none /></a>
+<a href=#><img src=images/project/061.png alt=images style=pointer-events:none /></a>
 <div class=hover-effect>
 <div class=text-inside>
 <h3 class=name-gr><a href=#>UI/Ux</a></h3>
@@ -500,7 +511,7 @@ for our honorable customers
 <div class="col-lg-4 col-12 wow fadeInRight" data-wow-delay=400ms>
 <div class=gallery-item>
 <div class=image-box>
-<a href=#><img src="images/project/h-crypto trader.png" alt=images style=pointer-events:none /></a>
+<a href=#><img src="images/project/051.png" alt=images style=pointer-events:none /></a>
 <div class=hover-effect>
 <div class=text-inside>
 <h3 class=name-gr>
@@ -527,7 +538,7 @@ for our honorable customers
 <div class="testimonial testimonial-type3 text-center">
 <div class=author-info>
 <div class=avatar>
-<img src="images/testimonial/group design nikunj bhalala.png" alt=images style=pointer-events:none />
+<img src="images/testimonial/groupdesign.png" alt=images style=pointer-events:none />
 <div class=polygon>
 <img src=images/testimonial/09.png alt=images style=pointer-events:none />
 </div>
@@ -631,7 +642,16 @@ impressive services that stands out globally.
 <h3 class="widget widget-title">About Us</h3>
 <ul class=widget-nav-menu>
 <li><a href=about.html>About Us</a></li>
-<li><a href=#testimonial>Testimonials</a></li>
+<li><a href=#testimonial onclick="smoothscroll()">Testimonials</a>
+  <script>
+    function smoothscroll() {
+  window.scrollTo({
+    top: 1000,
+    behavior: 'smooth'
+  });
+}
+  </script>
+</li>
 <li><a href=#platform>our Expertise</a></li>
 <li><a href=#>Privacy & Policy</a></li>
 </ul>
@@ -672,19 +692,19 @@ impressive services that stands out globally.
 <a id=scroll-top class=show></a>
 </div>
 <script src=javascript/jquery.min.js></script>
-<script src=javascript/plugins.js></script>
-<script src=javascript/jquery-ui.js></script>
+<!-- <script src=javascript/plugins.js></script> -->
+<!-- <script src=javascript/jquery-ui.js></script> -->
 <script src=javascript/owl.carousel.min.js></script>
-<script src="javascript/maps.js"></script>
-<script src=javascript/gmap3.min.js></script>
-<script src=javascript/jquery-fancybox.js></script>
-<script src=javascript/jquery-countTo.js></script>
+<!-- <script src="javascript/maps.js"></script> -->
+<!-- <script src=javascript/gmap3.min.js></script> -->
+<!-- <script src=javascript/jquery-fancybox.js></script> -->
+<!-- <script src=javascript/jquery-countTo.js></script> -->
 <script src=javascript/wow.min.js></script>
 <script src=javascript/jquery-validate.js></script>
-<script src=javascript/jquery.cookie.js></script>
+<!-- <script src=javascript/jquery.cookie.js></script> -->
 <script src=javascript/main.js></script>
-<script src=rev-slider/js/jquery.themepunch.tools.min.js></script>
-<script src=rev-slider/js/jquery.themepunch.revolution.min.js></script>
+<!-- <script src=rev-slider/js/jquery.themepunch.tools.min.js></script> -->
+<!-- <script src=rev-slider/js/jquery.themepunch.revolution.min.js></script> -->
 <script src=javascript/rev-slider.js></script>
 <script src=rev-slider/js/extensions/extensionsrevolution.extension.actions.min.js></script>
 <script src=rev-slider/js/extensions/extensionsrevolution.extension.carousel.min.js></script>
