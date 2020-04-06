@@ -5,35 +5,40 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
 <url>
   <loc>https://aoroxa.com/</loc>
   <lastmod>2020-04-02T06:36:35+00:00</lastmod>
+  <changefrequency>weekly</changefrequency>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://aoroxa.com/index.html</loc>
   <lastmod>2020-04-02T06:36:35+00:00</lastmod>
+  <changefrequency>weekly</changefrequency>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://aoroxa.com/services-details-sidebar-right.html</loc>
+  <loc>https://aoroxa.com/services.html</loc>
   <lastmod>2020-04-02T06:37:11+00:00</lastmod>
+  <changefrequency>weekly</changefrequency>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://aoroxa.com/portfolio.html</loc>
   <lastmod>2020-04-02T06:37:35+00:00</lastmod>
+  <changefrequency>weekly</changefrequency>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://aoroxa.com/about.html</loc>
   <lastmod>2020-04-02T06:38:11+00:00</lastmod>
+  <changefrequency>weekly</changefrequency>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://aoroxa.com/contact.html</loc>
   <lastmod>2020-04-02T06:37:52+00:00</lastmod>
+  <changefrequency>weekly</changefrequency>
   <priority>0.80</priority>
 </url>
 
