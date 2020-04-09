@@ -1016,7 +1016,7 @@ input::-webkit-input-placeholder {
 }
 .banner-section {
   padding: 199px 0 128px;
-  background-image: url(../images/page-title/01.png);
+  background-image: url(../images/page-title/01.jpg);
   background-size: cover;
   transform: scaleX(-1);
 }
@@ -2788,7 +2788,6 @@ input::-webkit-input-placeholder {
   position: absolute;
 }
 .business-box {
-  padding: 51px 25px 47px 37px;
 }
 .business-bg:hover {
   background-position: right center;
