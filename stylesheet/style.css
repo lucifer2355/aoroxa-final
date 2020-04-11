@@ -3057,3 +3057,31 @@ input::-webkit-input-placeholder {
   text-align: center;
   border-radius: 10px;
 }
+
+.cookie-container {
+  margin: 5% 20% 10% 20%;
+  text-align: start;
+}
+
+.cookie-text-container {
+  margin-bottom: 2%;
+}
+
+.cookie-title {
+  color: #212529;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.cookie-p {
+  display: block;
+  width: 100%;
+  margin-bottom: 25px;
+  color: #212529;
+  font-size: 1.12rem;
+  line-height: 1.7;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
