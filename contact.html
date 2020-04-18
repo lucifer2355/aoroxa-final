@@ -314,7 +314,7 @@
                 </div>
             </div>
         </div>
-        <a id=scroll-top class=show></a>
+        <a id=scroll-top class=show onclick="topFunction()"></a>
     </div>
     <script src=javascript/jquery.min.js></script>
     <!-- <script src=javascript/plugins.js></script> -->
@@ -351,6 +351,13 @@
                 alert("Thank you! for getting in touch");
             });
         });
+    </script>
+
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
     </script>
 </body>
 
