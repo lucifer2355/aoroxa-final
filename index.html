@@ -125,6 +125,9 @@
                                     <a href=about.html>About Us</a>
                                 </li>
                                 <li><a href=contact.html>Contact Us</a></li>
+                                <li>
+                                    <a href=blog.html>Blog</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -665,7 +668,7 @@
                 </div>
             </div>
         </div>
-        <a id=scroll-top class=show></a>
+        <a id=scroll-top class=show onclick="topFunction()"></a>
     </div>
     <script src=javascript/jquery.min.js></script>
     <!-- <script src=javascript/plugins.js></script> -->
@@ -691,6 +694,13 @@
     <script src=rev-slider/js/extensions/extensionsrevolution.extension.parallax.min.js></script>
     <script src=rev-slider/js/extensions/extensionsrevolution.extension.slideanims.min.js></script>
     <script src=rev-slider/js/extensions/extensionsrevolution.extension.video.min.js></script>
+
+    <script>
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 
 </html>
